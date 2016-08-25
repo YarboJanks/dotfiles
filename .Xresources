@@ -63,8 +63,11 @@ URxvt.perl-lib:            /home/alex/.config/urxvt/ext/
 URxvt.perl-ext-common:     matcher,resize-font,selection-to-clipboard,pasta
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger:  C-Up
-
+URxvt.visualBell:          true
+URxvt.cursorBlink:         true
+URxvt.scrollWithBuffer:    false
 URxvt.keysym.Control-Super-V: perl:pasta:paste
+urxvt*matcher.button:      1
 
 URxvt.url-launcher:        /usr/bin/firefox
 URxvt.colorUL:		   #7780a1
