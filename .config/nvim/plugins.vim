@@ -24,12 +24,13 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
 
-Plug 'chrisbra/vim-zsh',                { 'for': 'zsh' }
-Plug 'mattn/emmet-vim',                 { 'for': ['html', 'javascript.jsx'] }
-Plug 'nelstrom/vim-textobj-rubyblock',  { 'for': 'ruby' }
-Plug 'thoughtbot/vim-rspec',            { 'for': 'ruby' }
-Plug 'tpope/vim-bundler',               { 'for': 'ruby' }
-Plug 'tpope/vim-cucumber',              { 'for': 'ruby' }
+Plug 'chrisbra/vim-zsh',               { 'for': 'zsh' }
+Plug 'freitass/todo.txt-vim',          { 'for': 'txt' }
+Plug 'mattn/emmet-vim',                { 'for': ['html', 'javascript.jsx'] }
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
+Plug 'thoughtbot/vim-rspec',           { 'for': 'ruby' }
+Plug 'tpope/vim-bundler',              { 'for': 'ruby' }
+Plug 'tpope/vim-cucumber',             { 'for': 'ruby' }
 
 if has('mac')
   Plug 'rizzatti/dash.vim'

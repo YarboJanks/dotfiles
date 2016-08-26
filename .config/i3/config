@@ -166,7 +166,7 @@ smart_gaps on
   # exec_always --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --off --output DP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --off
   #
   # Dual Work Monitor
-  exec_always --no-startup-id xrandr --dpi 220
+  exec_always --no-startup-id xrandr --dpi 200
 
   exec --no-startup-id spotify
   exec --no-startup-id slack
