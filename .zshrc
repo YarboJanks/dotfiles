@@ -34,6 +34,9 @@ alias reload="source ~/.zshrc"
 # Temp aliases
 alias kedit="cd $HOME/Dropbox/Code/keyboards/atreus-firmware/atreus/; e keymap_alex.c"
 
+# necessary when using Termiteo
+[ "$TERM" = "xterm-termite" ] && alias ssh="TERM=screen-256color ssh"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).

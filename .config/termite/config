@@ -1,13 +1,20 @@
 [options]
 font = Hack 16
+scroll_on_output = false
+scroll_on_keystroke = true
+visible_bell = true
+allow_bold = true
+scrollback_lines = 1000
+#icon_name = terminal
+cursor_blink = on
+
 
 [colors]
-
 # special
 foreground = #cccccc
-background  = #2d2d2d
 foreground_bold = #ffffff
-cursor          = #cccccc
+background  = #2d2d2d
+cursor  = #cccccc
 
 # black
 color0  = #000000
