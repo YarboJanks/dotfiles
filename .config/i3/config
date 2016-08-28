@@ -1,5 +1,5 @@
-# Mod Key
-  set $mod Mod1
+# Mod Key - Windows Key
+  set $mod Mod4
 
 # Constants
   set $base00 #101218
@@ -160,13 +160,8 @@ smart_gaps on
   bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Startup
-  exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/.wallpaper.jpg
-
-  # Single Work Monitor
-  # exec_always --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --off --output DP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --off
-  #
-  # Dual Work Monitor
   exec_always --no-startup-id xrandr --dpi 200
+  exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/.wallpaper.jpg
 
   exec --no-startup-id spotify
   exec --no-startup-id slack
@@ -174,6 +169,8 @@ smart_gaps on
   exec --no-startup-id compton -f
 
 # Keyboard
-  exec_always setxkbmap -option "ctrl:nocaps"
+  exec_always setxkbmap -option "altwin:swap_lalt_lwin"
   exec_always xmodmap -e "pointer = 1 2 3 5 4 7 6 8 9 10 11 12" # set 'natural' scrolling
-  exec_always xcape -e 'Control_L=Escape'
+
+  exec_always setxkbmap -option "ctrl:nocaps"
+  exec_always xcape -e "Control_L=Escape"
