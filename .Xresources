@@ -60,14 +60,16 @@ URxvt.boldItalicFont:      xft:Dejavu Sans Mono For Powerline:pixelsize=12:bold:
 URxvt.letterSpace: 	   -2
 
 URxvt.perl-lib:            /home/alex/.config/urxvt/ext/
-URxvt.perl-ext-common:     matcher,resize-font,selection-to-clipboard,pasta
+URxvt.perl-ext-common:     default,matcher,resize-font,selection-to-clipboard,pasta
+URxvt.matcher.button:      1
+
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger:  C-Up
+
 URxvt.visualBell:          true
 URxvt.cursorBlink:         true
 URxvt.scrollWithBuffer:    false
 URxvt.keysym.Control-Super-V: perl:pasta:paste
-urxvt*matcher.button:      1
 
-URxvt.url-launcher:        /usr/bin/firefox
+URxvt.url-launcher:        /usr/bin/chromium-browser
 URxvt.colorUL:		   #7780a1
