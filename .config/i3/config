@@ -40,7 +40,7 @@
   bindsym $mod+v split v
   bindsym $mod+b split h
 # Program Settings
-  bindsym $mod+Return exec urxvt
+  bindsym $mod+Return exec termite
   bindsym $mod+d exec rofi -show run
   bindsym $mod+p exec $HOME/.config/i3/.scripts/lock -p 10
   bindsym $mod+Shift+s exec scrot -s ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png

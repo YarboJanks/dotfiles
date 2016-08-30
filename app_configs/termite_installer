@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+set -e
+
+apt-get -y install g++ libgtk-3-dev gtk-doc-tools gnutls-bin valac libglib3.0-cil-dev libgnutls28-dev libgirepository1.0-dev libxml2-utils gperf git
+git clone --recursive https://github.com/thestinger/termite.git
+git clone https://github.com/thestinger/vte-ng.git
+
+
+cd vte-ng && ./autogen.sh && make && make install
+cd ../termite && make && sudo checkinstall -Dy --nodoc
+
+desktop-file-install termite.desktop
+
+sudo cp /usr/local/lib/libvte-2.91.a /usr/local/lib/libvte-2.91{.la,.so,.so.0,.so.0.4000.2} /usr/lib
+
+sudo mkdir -p /lib/terminfo/x
+sudo ln -s /usr/local/share/terminfo/x/xterm-termite /lib/terminfo/x/xterm-termite
