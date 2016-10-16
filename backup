@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+backup_folder='/home/red/.dotfiles/backup_lists'
+
 echo 'Backing up package lists'
-/bin/ls /usr/local/lib/node_modules > ~/.dotfiles/.node_modules
+/bin/ls /usr/local/lib/node_modules > "$backup_folder/.node_modules"
 
 if [[ `uname` == 'Darwin' ]]; then
   echo 'Backup up OSX specific package lists...'
-  /bin/ls /usr/local/Cellar > ~/.dotfiles/.cellar
-  /bin/ls /usr/local/Caskroom > ~/.dotfiles/.casks
+  /bin/ls /usr/local/Cellar > $backup_folder/.cellar
+  /bin/ls /usr/local/Caskroom > $backup_folder/.casks
 fi
 
