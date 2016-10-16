@@ -32,11 +32,6 @@ Plug 'thoughtbot/vim-rspec',           { 'for': 'ruby' }
 Plug 'tpope/vim-bundler',              { 'for': 'ruby' }
 Plug 'tpope/vim-cucumber',             { 'for': 'ruby' }
 
-if has('mac')
-  Plug 'rizzatti/dash.vim'
-  nmap <silent> <leader>d :Dash<CR>
-endif
-
 call plug#end()
 filetype plugin indent on
 

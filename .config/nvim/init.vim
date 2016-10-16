@@ -73,14 +73,8 @@ nnoremap <Leader>z  :wincmd _<cr>:wincmd \|<cr>
 nnoremap <Leader>Z  :wincmd =<cr>
 nmap     <Leader><Tab> :b#<CR>
 nnoremap <Leader><Up> :History:<CR>
-
-if has('mac')
-  vnoremap  <Leader>y "*y
-  nnoremap  <Leader>u "*p
-else
-  vnoremap  <Leader>y  "+y
-  nnoremap  <Leader>u  "+p
-endif
+vnoremap  <Leader>y  "+y
+nnoremap  <Leader>u  "+p
 
 " Make Yank behave
 vnoremap y myy`y
