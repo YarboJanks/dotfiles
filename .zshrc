@@ -33,6 +33,7 @@ alias reload="source ~/.zshrc"
 
 # Temp aliases
 alias kedit="cd $HOME/Dropbox/Code/keyboards/atreus-firmware/atreus/; e keymap_alex.c"
+alias pressh="gpg-connect-agent updatestartuptty /bye"
 
 # necessary when using Termiteo
 [ "$TERM" = "xterm-termite" ] && alias ssh="TERM=screen-256color ssh"
