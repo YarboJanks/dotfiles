@@ -1,18 +1,13 @@
-#!/usr/bin/env sh
-
+#!/usr/bin/env bash
 set -e
 
-# git clone --recursive https://github.com/thestinger/termite.git
-# git clone https://github.com/thestinger/vte-ng.git
-#
-# sudo apt-get -y install g++ libgtk-3-dev gtk-doc-tools gnutls-bin valac libglib3.0-cil-dev libgnutls28-dev libgirepository1.0-dev libxml2-utils gperf
+if [ "$(id -u)" -ne 0 ]; then
+  echo "run as root"
+  exit 0
+fi
 
-# cd vte-ng && ./autogen.sh && make && sudo checkinstall
-# cd ../termite && make && sudo checkinstall
-
-sudo desktop-file-install termite.desktop
-
-sudo cp /usr/local/lib/libvte-2.91.a /usr/local/lib/libvte-2.91{.la,.so,.so.0,.so.0.4000.2} /usr/lib
-
-sudo mkdir -p /lib/terminfo/x
-sudo ln -s /usr/local/share/terminfo/x/xterm-termite /lib/terminfo/x/xterm-termite
+git clone --recursive https://github.com/thestinger/termite.git
+cd termite && make && sudo checkinstall --no-doc
+desktop-file-install termite.desktop
+mkdir -p /lib/terminfo/x
+ln -s /usr/local/share/terminfo/x/xterm-termite /lib/terminfo/x/xterm-termite
