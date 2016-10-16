@@ -23,41 +23,6 @@ files=(
 )
 symlink ${files[@]}
 
-
-read -p "Link neovim dotfiles? [Y/n] " confirm
-if [ -z $confirm ] || [ $confirm = 'y' ]; then
-	echo 'Linking Neovim'
-	ln -sf $dir/.config/nvim $HOME/.config/
-	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
-
-if [[ $(uname) = 'Linux' ]]; then
-	linux_files=('.scripts' '.fonts' '.Xresources')
-	symlink ${linux_files[@]}
-
-	read -p "Install Linux Essentials? [Y/n] " confirm
-	if [ -z $confirm ] || [ $confirm = 'y' ]; then
-		echo 'Installing Linux essentals...'
-		sudo apt-get -y install cmake ctags curl git openvpn p7zip-full pass \
-			pinentry-curses screenfetch scrot silversearcher-ag tmux tree \
-			tty-clock xbacklight xcape xclip zsh 
-	fi
-
-	read -p "Symlink i3 Files [Y/n]" confirm
-	if [ -z $confirm ] || [ $confirm = 'y' ]; then
-		i3_files=('.config/i3/.i3blocks.conf' '.config/i3/.compton.conf')
-		symlink ${i3_files[@]}
-
-		ln -sf $dir/.config/i3 $HOME/.config/
-		ln -sf $dir/.config/rofi $HOME/.config/
-		ln -sf $dir/.config/i3/.i3blocks.conf $HOME/
-		ln -sf $dir/.config/i3/.compton.conf $HOME/
-	fi
-
-fi
-
-
 if [[ $(uname) = 'Darwin' ]]; then
 	#install homebrew
 	$(which brew &> /dev/null) && /usr/bin/ruby \
@@ -75,6 +40,32 @@ if [[ $(uname) = 'Darwin' ]]; then
 	fi
 fi
 
+
+read -p "Link neovim dotfiles? [Y/n] " confirm
+if [ -z $confirm ] || [ $confirm = 'y' ]; then
+	echo 'Linking Neovim'
+	ln -sf $dir/.config/nvim $HOME/.config/
+	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+if [[ $(uname) = 'Linux' ]]; then
+	linux_files=('.scripts' '.fonts' '.Xresources')
+	symlink ${linux_files[@]}
+
+	read -p "Install Linux Essentials? [Y/n] " confirm
+	if [ -z $confirm ] || [ $confirm = 'y' ]; then
+		echo 'Installing Linux essentals...'
+		sudo apt-get -y install cmake ctags curl git openvpn p7zip-full pass \
+			pinentry-curses screenfetch scrot silversearcher-ag tmux tree \
+			tty-clock xbacklight xcape xclip zsh 
+	fi
+
+	read -p "Symlink i3 Files [Y/n]" confirm
+	if [ -z $confirm ] || [ $confirm = 'y' ]; then
+		symlink $dir/.config/i3/{.i3blocks.conf,.compton.conf}
+		ln -sf $dir/.config/{i3,rofi} $HOME/.config
+	fi
+fi
 
 # fetch submodules
 git submodule update --init --recursive
