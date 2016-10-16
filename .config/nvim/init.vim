@@ -54,8 +54,8 @@ noremap <expr> k v:count > 1 ? 'm`' . v:count . 'k' : 'gk'
 let mapleader = " "
 map      <Leader>b  :Buffers<CR>
 map      <Leader>c  :noh<CR>
-nmap     <Leader>e  :vsp ~/.vimrc<CR>
-nmap     <Leader>ee :source ~/.vimrc<CR>
+nmap     <Leader>e  :vsp ~/.config/nvim/init.vim<CR>
+nmap     <Leader>ee :source ~/.config/nvim/init.vim<CR>
 map      <Leader>f  :Ag<CR>
 nnoremap <Leader>gs :sp /tmp/scratch<CR>
 nnoremap <silent> <Leader>n :call mappings#cycle_numbering()<CR>

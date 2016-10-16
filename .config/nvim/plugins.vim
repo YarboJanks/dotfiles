@@ -40,7 +40,8 @@ filetype plugin indent on
   if has('termguicolors')
     set termguicolors
   endif
-  colorscheme onedark
+  set background=dark
+  colorscheme oneplus
 
 " RSpec.vim mappings
   let g:rspec_command = "VtrSendCommandToRunner! zeus rspec {spec}"
