@@ -1,7 +1,7 @@
 ZSH=$HOME/.zsh
 ZSH_CUSTOM=$HOME/.dotfiles/zsh-files
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/n/bin"
 export EDITOR="$(which nvim)"
 
 plugins=(
@@ -32,12 +32,10 @@ alias iedit="e ~/.config/i3/config"
 alias reload="source ~/.zshrc"
 
 # Temp aliases
-alias kedit="cd $HOME/Dropbox/Code/keyboards/atreus-firmware/atreus/; e keymap_alex.c"
+alias kedit="cd $HOME/Code/keyboards/atreus-firmware/atreus/; e keymap_alex.c"
 alias pressh="gpg-connect-agent updatestartuptty /bye"
 
-# necessary when using Termiteo
+# necessary when using Termite
 [ "$TERM" = "xterm-termite" ] && alias ssh="TERM=screen-256color ssh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
