@@ -12,13 +12,8 @@ else
 fi
 
 # checks if this is desktop or laptop
-if [ "$(ls -A /sys/class/power_supply/)" ];then
-  charged_slots=$(echo "(($current_charge/$total_charge)*5)+1" | bc -l | cut -d '.' -f 1)
-  if [[ $charged_slots -gt 5 ]]; then
-    charged_slots=5
-  fi
-else
-  # were on a desktop, show 5 hearts
+charged_slots=$(echo "(($current_charge/$total_charge)*5)+1" | bc -l | cut -d '.' -f 1)
+if [[ $charged_slots -gt 5 ]]; then
   charged_slots=5
 fi
 
