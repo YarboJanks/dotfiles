@@ -12,10 +12,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-sneak'
 Plug 'kana/vim-textobj-user' 
+Plug 'maralla/completor.vim'
 Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
@@ -76,6 +76,3 @@ filetype plugin indent on
 
 " Syntastic
   let g:syntastic_ruby_checkers = ['rubocop']
-
-" Use deoplete.
-  let g:deoplete#enable_at_startup = 1
