@@ -33,8 +33,6 @@ set textwidth=109
 set timeoutlen=1000 ttimeoutlen=10
 set wiw=120
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
 " Custom Mappings
 inoremap jk <ESC>
 cnoremap jk <ESC>

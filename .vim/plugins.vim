@@ -40,10 +40,11 @@ call plug#end()
 filetype plugin indent on
 
 " Colorscheme
-  syntax on
-  if has('termguicolors')
+  if (has("termguicolors"))
     set termguicolors
+    set t_ut=
   endif
+  syntax on
   colorscheme onedark
 
 " RSpec.vim mappings
