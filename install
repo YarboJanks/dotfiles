@@ -20,28 +20,14 @@ files=(
 	'.agignore'
 	'.rubocop.yml'
 	'.gnupg'
+	'.vim*'
 )
 symlink ${files[@]}
 
-read -p "Install neovim? [Y/n] " confirm
-if [ -z $confirm ] || [ $confirm = 'y' ]; then
-	echo 'Installing Neovim'
-	if [[ $(uname) = 'Darwin' ]]; then
-		brew install neovim
-	else
-		sudo apt-get update
-		sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip python3-neovim python-neovim python3-pi
-		pip3 install neovim
-		git clone https://github.com/neovim/neovim.git
-		cd neovim
-		make && sudo make install 
-	fi
-	ln -sf $dir/.config/nvim $HOME/.config/
 
-	# install vim plugins
-	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	nvim +PlugInstall +qall
-fi
+# install vim plugins
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall +qall
 
 if [[ $(uname) = 'Linux' ]]; then
 	echo 'Installing Linux essentals...'
@@ -135,13 +121,6 @@ fi
 
 
 if [[ $(uname) = 'Darwin' ]]; then
-	#install homebrew
-	$(which brew &> /dev/null) && /usr/bin/ruby \
-		-e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-	# install the essentials
-	brew tap caskroom/fonts
-	brew install zsh git tmux ctags curl the_silver_searcher
 
 	read -p "Install hammerspoon? [Y/n]" confirm
 	if [ -z $confirm ] || [ $confirm = 'y' ]; then

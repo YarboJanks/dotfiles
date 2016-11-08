@@ -24,11 +24,10 @@ source $ZSH_CUSTOM/themes/audibleblink.zsh       # Sets theme
 
 alias e=$EDITOR
 alias zedit="e ~/.zshrc"
-alias vedit="e ~/.config/nvim/init.vim"
+alias vedit="e ~/.vimrc"
 alias tedit="e ~/.tmux.conf"
-alias bedit="e ~/.config/nvim/plugins.vim"
+alias bedit="e ~/.vim/plugins.vim"
 alias aedit="e ~/.dotfiles/zsh-files/functions"
-alias iedit="e ~/.config/i3/config"
 alias reload="source ~/.zshrc"
 
 # Temp aliases
