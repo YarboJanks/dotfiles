@@ -40,102 +40,101 @@ lctrl - x         ![HyperTerm,Terminal,iTerm2]      :   khd -p "- delete"
 # KWM CONFIGS
 ############################################################
 # enable kwm compatibility mode
-khd kwm on
-
-# set border color for different modes
-khd mode default color 0xddffd479
-khd mode resize color 0xdd458588
-
-cmd + ctrl - r          :   khd -e "reload" # reload config
-cmd + ctrl - return     :   open -na /Applications/iTerm.app; khd -e "mode activate default"
-
-# enter resize mode
-cmd + ctrl + shift - r          :   khd -e "mode activate resize"
-
-# change focus
-cmd + ctrl - h          :   kwmc window -f west
-cmd + ctrl - j          :   kwmc window -f south
-cmd + ctrl - k          :   kwmc window -f north
-cmd + ctrl - l          :   kwmc window -f east
-
-cmd + ctrl - n          :   kwmc display -f next
-
-# move windows
-cmd + ctrl + shift - h                :   kwmc window -s west
-cmd + ctrl + shift - j                :   kwmc window -s south
-cmd + ctrl + shift - k                :   kwmc window -s north
-cmd + ctrl + shift - l                :   kwmc window -s east
-cmd + ctrl + shift - m                :   kwmc window -s mark
-
-# move window to space
-cmd + ctrl + shift - 1                :   kwmc window -m 1
-cmd + ctrl + shift - 2                :   kwmc window -m 2
-cmd + ctrl + shift - 3                :   kwmc window -m 3
-cmd + ctrl + shift - 4                :   kwmc window -m 4
-cmd + ctrl + shift - 5                :   kwmc window -m 5
-
-# move window to display
-cmd + ctrl + shift - n                :   kwmc space -m next
-
-# switch to space
-cmd + ctrl - 1            :   kwmc space -fExperimental 1
-cmd + ctrl - 2            :   kwmc space -fExperimental 2
-cmd + ctrl - 3            :   kwmc space -fExperimental 3
-cmd + ctrl - 4            :   kwmc space -fExperimental 4
-cmd + ctrl - 5            :   kwmc space -fExperimental 5
-
-# switcher - z            :   kwmc space -fExperimental left
-# switcher - c            :   kwmc space -fExperimental right
-# switcher - f            :   kwmc space -fExperimental previous
+# khd kwm on
 #
-# switcher + shift - 1    :   kwmc display -f 0
-# switcher + shift - 2    :   kwmc display -f 1
-# switcher + shift - 3    :   kwmc display -f 2
-
-
-
-# swap + shift - k        :   kwmc window -m north
-# swap + shift - l        :   kwmc window -m east
-# swap + shift - j        :   kwmc window -m south
-# swap + shift - h        :   kwmc window -m west
-# swap + shift - m        :   kwmc window -m mark
-
-# swap - 1                :   kwmc window -m space 1
-# swap - 2                :   kwmc window -m space 2
-# swap - 3                :   kwmc window -m space 3
-# swap - 4                :   kwmc window -m space 4
-# swap - 5                :   kwmc window -m space 5
+# # set border color for different modes
+# khd mode default color 0xddffd479
+# khd mode resize color 0xdd458588
 #
-# swap - z                :   kwmc window -m space left
-# swap - c                :   kwmc window -m space right
+# cmd + ctrl - r          :   khd -e "reload" # reload config
+# cmd + ctrl - return     :   open -na /Applications/iTerm.app; khd -e "mode activate default"
 #
-# swap + shift - 1        :   kwmc window -m display 0
-# swap + shift - 2        :   kwmc window -m display 1
-# swap + shift - 3        :   kwmc window -m display 2
+# # enter resize mode
+# cmd + ctrl + shift - r          :   khd -e "mode activate resize"
 #
-
-cmd + ctrl - f          :   kwmc window -z fullscreen
-cmd + ctrl - w          :   kwmc window -t focused
-cmd + ctrl - e          :   kwmc tree rotate 90
-
-# resize mode
-resize - escape          :   khd -e "mode activate default"
-resize - space           :   kwmc space -t float
-
-resize - h                :   kwmc window -c expand 0.05 west
-resize - j                :   kwmc window -c expand 0.05 south
-resize - k                :   kwmc window -c expand 0.05 north
-resize - l                :   kwmc window -c expand 0.05 east
-resize + shift - h        :   kwmc window -c reduce 0.05 west
-resize + shift - j        :   kwmc window -c reduce 0.05 south
-resize + shift - k        :   kwmc window -c reduce 0.05 north
-resize + shift - l        :   kwmc window -c reduce 0.05 east
-
-# default
-cmd + alt + ctrl - m    :   kwmc window -mk focused
-cmd + alt + ctrl - h    :   kwmc window -mk west wrap
-cmd + alt + ctrl - l    :   kwmc window -mk east wrap
-cmd + alt + ctrl - j    :   kwmc window -mk south wrap
-cmd + alt + ctrl - k    :   kwmc window -mk north wrap
-
-cmd - 0x2A              :   khd -w "aasvi93@hotmail.com"
+# # change focus
+# cmd + ctrl - h          :   kwmc window -f west
+# cmd + ctrl - j          :   kwmc window -f south
+# cmd + ctrl - k          :   kwmc window -f north
+# cmd + ctrl - l          :   kwmc window -f east
+#
+# cmd + ctrl - n          :   kwmc display -f next
+#
+# # move windows
+# cmd + ctrl + shift - h                :   kwmc window -s west
+# cmd + ctrl + shift - j                :   kwmc window -s south
+# cmd + ctrl + shift - k                :   kwmc window -s north
+# cmd + ctrl + shift - l                :   kwmc window -s east
+#
+# # move window to space
+# cmd + ctrl + shift - 1                :   kwmc window -m 1
+# cmd + ctrl + shift - 2                :   kwmc window -m 2
+# cmd + ctrl + shift - 3                :   kwmc window -m 3
+# cmd + ctrl + shift - 4                :   kwmc window -m 4
+# cmd + ctrl + shift - 5                :   kwmc window -m 5
+#
+# # move window to display
+# cmd + ctrl + shift - n                :   kwmc window -m space next
+#
+# # switch to space
+# cmd + ctrl - 1            :   kwmc space -fExperimental 1
+# cmd + ctrl - 2            :   kwmc space -fExperimental 2
+# cmd + ctrl - 3            :   kwmc space -fExperimental 3
+# cmd + ctrl - 4            :   kwmc space -fExperimental 4
+# cmd + ctrl - 5            :   kwmc space -fExperimental 5
+#
+# # switcher - z            :   kwmc space -fExperimental left
+# # switcher - c            :   kwmc space -fExperimental right
+# # switcher - f            :   kwmc space -fExperimental previous
+# #
+# # switcher + shift - 1    :   kwmc display -f 0
+# # switcher + shift - 2    :   kwmc display -f 1
+# # switcher + shift - 3    :   kwmc display -f 2
+#
+#
+#
+# # swap + shift - k        :   kwmc window -m north
+# # swap + shift - l        :   kwmc window -m east
+# # swap + shift - j        :   kwmc window -m south
+# # swap + shift - h        :   kwmc window -m west
+# # swap + shift - m        :   kwmc window -m mark
+#
+# # swap - 1                :   kwmc window -m space 1
+# # swap - 2                :   kwmc window -m space 2
+# # swap - 3                :   kwmc window -m space 3
+# # swap - 4                :   kwmc window -m space 4
+# # swap - 5                :   kwmc window -m space 5
+# #
+# # swap - z                :   kwmc window -m space left
+# # swap - c                :   kwmc window -m space right
+# #
+# # swap + shift - 1        :   kwmc window -m display 0
+# # swap + shift - 2        :   kwmc window -m display 1
+# # swap + shift - 3        :   kwmc window -m display 2
+# #
+#
+# cmd + ctrl - f          :   kwmc window -z fullscreen
+# cmd + ctrl - w          :   kwmc window -t focused
+# cmd + ctrl - e          :   kwmc tree rotate 90
+#
+# # resize mode
+# resize - escape          :   khd -e "mode activate default"
+# resize - space           :   kwmc space -t float
+#
+# resize - h                :   kwmc window -c expand 0.05 west
+# resize - j                :   kwmc window -c expand 0.05 south
+# resize - k                :   kwmc window -c expand 0.05 north
+# resize - l                :   kwmc window -c expand 0.05 east
+# resize + shift - h        :   kwmc window -c reduce 0.05 west
+# resize + shift - j        :   kwmc window -c reduce 0.05 south
+# resize + shift - k        :   kwmc window -c reduce 0.05 north
+# resize + shift - l        :   kwmc window -c reduce 0.05 east
+#
+# # default
+# cmd + alt + ctrl - m    :   kwmc window -mk focused
+# cmd + alt + ctrl - h    :   kwmc window -mk west wrap
+# cmd + alt + ctrl - l    :   kwmc window -mk east wrap
+# cmd + alt + ctrl - j    :   kwmc window -mk south wrap
+# cmd + alt + ctrl - k    :   kwmc window -mk north wrap
+#
+# cmd - 0x2A              :   khd -w "aasvi93@hotmail.com"

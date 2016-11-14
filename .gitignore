@@ -2,10 +2,8 @@
 .vim/plugged
 .installed
 .atom/*
-.config/nvim/session
-.config/nvim/.netrwhist
-.config/nvim/.init*
+session
+.netrwhist
 .gnupg/*
 !.gnupg/gpg.conf
 !.gnupg/gpg-agent.conf
-.config/nvim/plugged

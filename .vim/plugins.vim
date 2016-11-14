@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'AndrewRadev/splitjoin.vim'
@@ -30,11 +30,6 @@ Plug 'nelstrom/vim-textobj-rubyblock',  { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec',            { 'for': 'ruby' }
 Plug 'tpope/vim-bundler',               { 'for': 'ruby' }
 Plug 'tpope/vim-cucumber',              { 'for': 'ruby' }
-
-if has('mac')
-  Plug 'rizzatti/dash.vim'
-  nmap <silent> <leader>d :Dash<CR>
-endif
 
 call plug#end()
 filetype plugin indent on
@@ -77,3 +72,4 @@ filetype plugin indent on
 
 " Syntastic
   let g:syntastic_ruby_checkers = ['rubocop']
+  let g:syntastic_javascript_checkers = ['standard']
