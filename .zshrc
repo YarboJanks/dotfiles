@@ -34,3 +34,6 @@ alias reload="source ~/.zshrc"
 alias kedit="cd $HOME/Dropbox/Code/keyboards/atreus-firmware/atreus/; e keymap_alex.c"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+### Added by the Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
