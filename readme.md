@@ -1,6 +1,7 @@
 #dotfiles
 
-![](http://i.imgur.com/kePTR7P.png)
+![](http://i.imgur.com/iip2LPT.png)
+![](http://i.imgur.com/hWq2u5T.jpg)
 
 ### Installation
 Clone to `~/.dotfiles`
