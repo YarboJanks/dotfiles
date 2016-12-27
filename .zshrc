@@ -36,6 +36,6 @@ alias kedit="cd $HOME/Code/keyboards/atreus-firmware/atreus/; e keymap_alex.c"
 alias pressh="gpg-connect-agent updatestartuptty /bye"
 
 # necessary when using Termite
-[ "$TERM" = "xterm-termite" ] && alias ssh="TERM=screen-256color ssh"
+[ "$TERM" = "xterm-termite" ] && alias ssh="pressh && TERM=screen-256color ssh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
