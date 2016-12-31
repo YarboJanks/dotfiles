@@ -115,7 +115,7 @@
 
 # Program Workspace Assignments
   assign [class="firefox"] $workspace1
-  assign [class="Nylas N1"] $workspace8
+  assign [class="Franz"] $workspace8
   assign [class="Slack"] $workspace9
   assign [class="Spotify"] $workspace10
 
@@ -169,6 +169,7 @@ smart_gaps on
 
   exec --no-startup-id "spotify --force-device-scale-factor=1.5"
   exec --no-startup-id slack
+  exec --no-startup-id franz
   exec --no-startup-id firefox
   exec --no-startup-id compton -f
 
