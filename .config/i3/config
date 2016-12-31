@@ -163,8 +163,9 @@ smart_gaps on
 # Startup
   exec_always --no-startup-id xrandr --dpi 180
   exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/.wallpaper.jpg
-  exec_always --no-startup-id "dropbox start"
-  exec_always --no-startup-id redshift-gtk
+  exec --no-startup-id "dropbox start"
+  exec --no-startup-id "xfce-power-manager"
+  exec --no-startup-id redshift-gtk
 
   exec --no-startup-id "spotify --force-device-scale-factor=1.5"
   exec --no-startup-id slack
